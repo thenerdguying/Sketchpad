@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="Assets/Sketchpad.png">
+  <title>Sketchpad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="toolbar">
+        <select id="fontFamily">
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+        <select id="fontSize">
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16" selected>16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="24">24</option>
+          <option value="28">28</option>
+          <option value="32">32</option>
+        </select>
+        <button id="bold" title="Bold"><b>B</b></button>
+        <button id="italic" title="Italic"><i>I</i></button>
+        <button id="underline" title="Underline"><u>U</u></button>
+        <input type="color" id="textColor" value="#000000" title="Text Color">
+        <button id="alignLeft" title="Align Left">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M1 1h14v2H1V1zm0 4h10v2H1V5zm0 4h14v2H1V9zm0 4h10v2H1v-2z"/>
+          </svg>
+        </button>
+        <button id="alignCenter" title="Align Center">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M1 1h14v2H1V1zm2 4h10v2H3V5zm-2 4h14v2H1V9zm2 4h10v2H3v-2z"/>
+          </svg>
+        </button>
+        <button id="alignRight" title="Align Right">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M1 1h14v2H1V1zm4 4h10v2H5V5zm-4 4h14v2H1V9zm4 4h10v2H5v-2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div id="editor" contenteditable="true" spellcheck="true"></div>
+    </main>
+    <div class="status-bar">
+      <span id="wordCount">Words: 0</span>
+      <span id="charCount">Characters: 0</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
